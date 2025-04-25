@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,6 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				medical: {
+					DEFAULT: '#0EA5E9',
+					light: '#38BDF8',
+					dark: '#0284C7',
+					50: '#F0F9FF',
+					100: '#E0F2FE',
+					200: '#BAE6FD',
+					accent: '#E5DEFF',
+					secondary: '#9b87f5'
 				}
 			},
 			borderRadius: {
