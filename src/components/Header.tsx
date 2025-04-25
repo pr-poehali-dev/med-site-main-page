@@ -5,9 +5,9 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
@@ -31,11 +31,13 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Главная
-                  </NavigationMenuLink>
-                </Link>
+                {/* Исправлено: вместо вложенной ссылки используем NavigationMenuLink напрямую */}
+                <NavigationMenuLink 
+                  className={navigationMenuTriggerStyle()} 
+                  asChild
+                >
+                  <Link to="/">Главная</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
@@ -71,19 +73,23 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/about">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    О проекте
-                  </NavigationMenuLink>
-                </Link>
+                {/* Исправлено: вместо вложенной ссылки используем NavigationMenuLink напрямую */}
+                <NavigationMenuLink 
+                  className={navigationMenuTriggerStyle()} 
+                  asChild
+                >
+                  <Link to="/about">О проекте</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/contact">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Контакты
-                  </NavigationMenuLink>
-                </Link>
+                {/* Исправлено: вместо вложенной ссылки используем NavigationMenuLink напрямую */}
+                <NavigationMenuLink 
+                  className={navigationMenuTriggerStyle()} 
+                  asChild
+                >
+                  <Link to="/contact">Контакты</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
